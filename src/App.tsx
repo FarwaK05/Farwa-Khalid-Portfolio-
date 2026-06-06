@@ -67,17 +67,17 @@ export default function App() {
     setTimeout(() => setCopied(false), 2000);
   };
 
- const handleDownloadCV = () => {
-    // 1. Create an invisible link
+  const handleDownloadCV = () => {
+    // 1. Create an invisible link element
     const link = document.createElement('a');
     
-    // 2. Point it exactly to the file in your public folder
+    // 2. Point it directly to the PDF file in your public folder
     link.href = '/Farwa CV_4th_semester.pdf'; 
     
-    // 3. Name the file as you want it to appear when downloaded
+    // 3. Name the file exactly as you want it to appear when the user downloads it
     link.download = 'Farwa_Khalid_CV.pdf'; 
     
-    // 4. Trigger the download automatically
+    // 4. Temporarily add the link to the screen, click it, and remove it
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
