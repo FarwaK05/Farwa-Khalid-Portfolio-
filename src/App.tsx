@@ -67,65 +67,20 @@ export default function App() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleDownloadCV = () => {
-    const cvText = `FARWA KHALID — SOFTWARE ENGINEER & DATA SCIENCE SPECIALIST
-================================================================
-Email: 2005fkhalid@gmail.com | Github: github.com/FarwaK05
-LinkedIn: linkedin.com/in/farwa-khalid-895527280
-Location: Islamabad, Pakistan
-
-SUMMARY
-A highly passionate Software Engineering student at Air University with dedicated expertise in engineering scalable full-stack web applications,
-robust REST APIs, and intelligent machine learning models. Adept in modern technologies
-and agile methodologies.
-
-ACADEMIC BACKGROUND
-• Air University (Islamabad) — Bachelor of Software Engineering (BSSE)
-  Expected Graduation: 2026
-
-AWARDS, TRAINING & CERTIFICATIONS
-• AI & Data Science Mentorship Program | Codanics (6-Month Course)
-  Completed with top-tier ranking and hands-on classification pipelines.
-• Applied Industrial Training in Data Science | ATS Training
-  Built cloud logic integration and API structures in Microsoft Azure.
-
-CORE PROJECTS
-• E-Canteen Portal (Full-Stack Web App)
-  Description: Modern canteen management platform streamlining menu coordination, secure order booking,
-               and dynamic kitchen management.
-  Tech Stack: React, Tailwind CSS, Node.js, Express, databases.
-  GitHub: https://github.com/FarwaK05/E-Canteen
-
-• SyncGlow Platform (Interactive Skincare Web Portal)
-  Description: Personalized health profiling app with analytical skin classification algorithms, custom recommendations.
-  Tech Stack: React, Tailwind CSS, FastAPI (Python), state management.
-  GitHub: https://github.com/FarwaK05/SyncGlow
-
-• DS Statistical Calculator (C++ Calculations Core & Web Interface)
-  Description: Advanced mathematical modeling application compiling custom statistical algorithms in C++ core,
-               paired with a beautiful interactive React frontend.
-  Tech Stack: C++, React, mathematical plotting.
-  GitHub: https://github.com/FarwaK05/DS-Statistical-Calculator
-
-TECHNICAL SKILLS
-• Frontend: React, Redux, Tailwind CSS, JavaScript ES6+, HTML5, CSS3
-• Backend: FastAPI (Python), Node.js, Express, REST APIs
-• Machine Learning: Scikit-learn, Feature Engineering (SMOTE), Pandas, Numpy
-• Data Science: Plotly EDA, Matplotlib, Exploratory Data Analysis, Linear Regression
-• Cloud & Tools: Microsoft Azure, Git, GitHub, VS Code, Figma, Jupyter Notebooks
-
-================================================================
-Generated from Farwa Khalid's Live Portfolio Website.`;
-
-    const blob = new Blob([cvText], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
+ const handleDownloadCV = () => {
+    // 1. Create an invisible link
     const link = document.createElement('a');
-    link.href = url;
-    link.download = 'Farwa_Khalid_CV.txt';
+    
+    // 2. Point it exactly to the file in your public folder
+    link.href = '/Farwa CV_4th_semester.pdf'; 
+    
+    // 3. Name the file as you want it to appear when downloaded
+    link.download = 'Farwa_Khalid_CV.pdf'; 
+    
+    // 4. Trigger the download automatically
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    URL.revokeObjectURL(url);
   };
 
   // Technologies lists representing Farwa's genuine dev stack
