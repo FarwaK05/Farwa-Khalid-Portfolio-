@@ -80,13 +80,6 @@ export default function App() {
     link.click();
     document.body.removeChild(link);
   };
-    
-    // 4. Temporarily add the link to the screen, click it, and remove it
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   // Technologies lists representing Farwa's genuine dev stack
   const skillRow1 = [
     { name: 'React', icon: Code2, color: 'text-cyan-400' },
