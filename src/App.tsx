@@ -233,7 +233,7 @@ export default function App() {
               </div>
               <span>&bull;</span>
               <div>
-                <span>BSSE Semester 4</span>
+                <span>BSSE Semester 5</span>
               </div>
               <span>&bull;</span>
               <div className="flex items-center gap-1">
@@ -364,7 +364,7 @@ export default function App() {
                 <span className="text-xs text-white/50 font-mono">BSSE (Software Engineering) &middot; 2024 - Present</span>
                 
                 <p className="text-xs sm:text-[13.5px] leading-relaxed text-white/60 mt-6 font-light">
-                  Currently completing my 4th Semester with excellence. Focused coursework in Object-Oriented Software Design, Algorithm Engineering, and Object Databases.
+                  Currently completing my 5th Semester with excellence. Focused coursework in Object-Oriented Software Design, Algorithm Engineering, and Object Databases.
                 </p>
               </div>
 
